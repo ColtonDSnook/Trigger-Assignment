@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 177335193}
   - component: {fileID: 177335192}
   - component: {fileID: 177335191}
+  - component: {fileID: 177335195}
   m_Layer: 0
   m_Name: Cauldron Button
   m_TagString: Untagged
@@ -228,6 +229,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &177335195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177335190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f4ff850c12f0948a3a2a314ab95779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1952841132}
 --- !u!1 &228392912
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +254,7 @@ GameObject:
   - component: {fileID: 228392915}
   - component: {fileID: 228392914}
   - component: {fileID: 228392913}
+  - component: {fileID: 228392917}
   m_Layer: 0
   m_Name: Pumpkin Button
   m_TagString: Untagged
@@ -333,6 +348,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &228392917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228392912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eff2f2a254254241b7bdb33ff8f01d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: 751334709}
+  onColor: {r: 1, g: 1, b: 1, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &261908969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,7 +674,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ccaefe5a2039dd4fa6a3296ceb1c536,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1296540982}
   m_SourcePrefab: {fileID: 100100000, guid: 7ccaefe5a2039dd4fa6a3296ceb1c536, type: 3}
 --- !u!1 &410087039
 GameObject:
@@ -1036,6 +1070,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3a1fa257382754185ea5b10c5a1efb, type: 3}
+--- !u!23 &751334709 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5cd64b9ed1daf8c47b6e69c87458727e,
+    type: 3}
+  m_PrefabInstance: {fileID: 542174590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &829351413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1088,7 @@ GameObject:
   - component: {fileID: 829351416}
   - component: {fileID: 829351415}
   - component: {fileID: 829351414}
+  - component: {fileID: 829351419}
   m_Layer: 0
   m_Name: Ghost Button
   m_TagString: Untagged
@@ -1141,6 +1182,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &829351419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829351413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f328ccd6fc77c841853e58940ed1970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1296540982}
+  animationTrigger: Activate
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1473,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3a1fa257382754185ea5b10c5a1efb, type: 3}
+--- !u!1 &1296540980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ccaefe5a2039dd4fa6a3296ceb1c536,
+    type: 3}
+  m_PrefabInstance: {fileID: 352671801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1296540982
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296540980}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d46876b18662724aa4c3be5253096a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1524053120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1495,6 +1577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4f42a7091632a9c47907ebddb93b4bd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1821,6 +1908,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73391497575dae4498294b06ce43f88e, type: 3}
+--- !u!1 &1952841132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f42a7091632a9c47907ebddb93b4bd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1524053120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2144950064
 PrefabInstance:
   m_ObjectHideFlags: 0
